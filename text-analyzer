@@ -1,0 +1,40 @@
+def word_count(text):
+    words=text.split()
+    return len(words)
+def char_count(text):
+    return len(text)
+def uppercase_count(text):
+    uppercase_letters=[char for char in text if char.isupper()]
+    return len(uppercase_letters),uppercase_letters
+def lowercase_count(text):
+    lowercase_letters=[char for char in text if char.islower()]
+    return len(lowercase_letters),lowercase_letters
+def text_analyzer():
+    text = input("enter block of text>>")
+    print("\n choose ur option")
+    print("1. word count")
+    print("2.character count")
+    print("3.uppercase letter count and list")
+    print("4.lowercase letters count and list")
+    print("5.exit")
+    while True:
+        ch=int(input("enter your choice>>"))
+        if ch==1:
+            print(f"total words : {word_count(text)}\n")
+        elif ch==2:
+            print(f"total character: {char_count(text)}\n")
+        elif ch==3:
+            count,uppercase_list=uppercase_count(text)
+            print(f"\n total uppercase letters :{count}")
+            print(f"list of uppercase letters :{uppercase_list}")
+        elif ch==4:
+            count, lowercase_list = lowercase_count(text)
+            print(f"\n total lowercase letters :{count}")
+            print(f"list of lowercase letters :{lowercase_list}")
+        elif ch==5:
+            print("exiting from programme")
+            break
+        else:
+            print("invalid choice\t try again!!!")
+if __name__=="__main__":
+    text_analyzer()
