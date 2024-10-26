@@ -1,0 +1,12 @@
+from itertools import product
+def evaluate_expression(p,q):
+    return(p or q) and (not p or q)
+def is_tautology():
+    truth_values=list(product({True,False},repeat=2))
+    for values in truth_values:
+        p,q=values
+    if not evaluate_expression('p','q'):
+        return False
+    return True
+result=is_tautology()
+print("the proposition is tautology" if result else " the propositon is not tautology")
