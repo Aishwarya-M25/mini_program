@@ -1,4 +1,4 @@
-# stack programme
+# stack programme using basic  operation
 #include<stdio.h>
 #include<stdlib.h>
 void evaluate();
